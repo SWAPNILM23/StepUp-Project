@@ -1,10 +1,10 @@
 import './App.css';
-import { LoginComp } from './components/LoginComp';
+import MainRoute from './User/Router/MainRoute';
 
 function App() {
   return (
     <div className="App">
-      <LoginComp></LoginComp>
+      <MainRoute></MainRoute>
     </div>
   );
 }
