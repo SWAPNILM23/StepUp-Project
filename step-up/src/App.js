@@ -1,14 +1,10 @@
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-import UserRouter from './Routers/UserRouter';
-import HomePage from './User/Components/HomePage';
+import { LoginComp } from './components/LoginComp';
 
 function App() {
   return (
     <div className="App">
-      <UserRouter></UserRouter>
-      <HomePage></HomePage>
+      <LoginComp></LoginComp>
     </div>
   );
 }
