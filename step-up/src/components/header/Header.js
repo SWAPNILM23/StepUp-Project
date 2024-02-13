@@ -1,6 +1,6 @@
 import React from 'react'
 import '../header/header.css';
-import Logo from '../../User/Assets/StepUP.png'
+import Logo from '../../assets/images/StepUP.png'
 import SearchIcon from '@mui/icons-material/Search';
 import Select from '../selectDrop/Select'
 

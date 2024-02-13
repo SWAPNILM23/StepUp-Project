@@ -1,11 +1,14 @@
 import './App.css';
-import { LoginComp } from './components/LoginComp';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/header/Header';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <LoginComp></LoginComp>
-    </div>
+   <div>
+    <Header />
+   </div>
   );
 }
 
