@@ -4,7 +4,8 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import NotFound from '../components/NotFound/NotFound';
 import Home from '../components/Home';
-import Signin from '../signin/Signin';
+import Signin from '../components/signin/Signin';
+
 
 const Routing = () => {
     return (
