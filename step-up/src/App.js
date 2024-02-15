@@ -1,11 +1,14 @@
 import './App.css';
-import MainRoute from './User/Router/MainRoute';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/header/Header';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <MainRoute></MainRoute>
-    </div>
+   <div>
+    <Header />
+   </div>
   );
 }
 
