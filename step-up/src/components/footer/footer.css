@@ -21,6 +21,7 @@ footer .part2 ul li{list-style: none; margin-bottom: 12px; padding-left: -32px;}
 footer .part2 ul li a{color:#000; opacity: 0.8; font-size: 500; transition: all 0.2s ease-in-out; text-decoration: none;}
 footer .part2 ul li a:hover{text-decoration: none;color: rgb(0, 0, 255)  !important; opacity: 1; padding-left: 5px;}
 
+
 footer .social {margin-top: 50px;}
 footer .part3 .social ul{ padding-left: 25px; }
 

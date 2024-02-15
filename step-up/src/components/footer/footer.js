@@ -1,22 +1,22 @@
-import React from 'react'
-import './footer.css';
-import Icon1 from '../../assets/images/icon-1.svg';
-import Icon2 from '../../assets/images/icon-2.svg'
-import Icon3 from '../../assets/images/icon-3.svg'
-import Icon4 from '../../assets/images/icon-4.svg'
-import Icon5 from '../../assets/images/icon-5.svg'
+import React from 'react';
 import Logo from '../../assets/images/StepUP.png';
+import Icon1 from '../../assets/images/icon-1.svg';
+import Icon2 from '../../assets/images/icon-2.svg';
+import Icon3 from '../../assets/images/icon-3.svg';
+import Icon4 from '../../assets/images/icon-4.svg';
+import Icon5 from '../../assets/images/icon-5.svg';
+import './footer.css';
 
-import { Link } from 'react-router-dom';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
+import { Link } from "react-router-dom";
+
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
+import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import paymentImage from '../../assets/images/payment-method.png';
 
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Footer = () => {
@@ -84,8 +84,7 @@ const Footer = () => {
                     <div className='row'>
                         <div className='col-md-3 part1'>
                             <div className='footerLogo'>
-                                {/* <a href='/'><img src={Logo} /></a> */}
-                                <img src={Logo} />
+                                <Link to={'/'}><img src={Logo} alt='Logo' /></Link> 
                                 <br />
                                 <p>Elevate Your Style, StepUP Your Game</p>
                             </div>
@@ -99,7 +98,7 @@ const Footer = () => {
                             <div className='row'>
                                 <div className='col'>
                                     <h3>Company</h3>
-                                    <ul class="footer-list mb-sm-5 mb-md-0">
+                                    <ul className="footer-list mb-sm-5 mb-md-0">
                                         <li><a href="#">About Us</a></li>
                                         <li><a href="#">Delivery Information</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
@@ -111,8 +110,9 @@ const Footer = () => {
 
                                 <div className='col'>
                                     <h3>Account</h3>
-                                    <ul class="footer-list mb-sm-5 mb-md-0">
-                                        <li><a href="#">Sign In</a></li>
+                                    <ul className="footer-list mb-sm-5 mb-md-0">
+                                        <li><Link to={'/signin'}>Signin</Link> </li>
+
                                         <li><a href="#">View Cart</a></li>
                                         <li><a href="#">My Wishlist</a></li>
                                         <li><a href="#">Track My Order</a></li>
@@ -123,7 +123,7 @@ const Footer = () => {
 
                                 <div className='col'>
                                     <h3>Popular</h3>
-                                    <ul class="footer-list mb-sm-5 mb-md-0">
+                                    <ul className="footer-list mb-sm-5 mb-md-0">
                                         <li><a href="#">Sneakers</a></li>
                                         <li><a href="#">Clogs</a></li>
                                         <li><a href="#">Flip-Flops</a></li>
