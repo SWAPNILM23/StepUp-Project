@@ -1,20 +1,18 @@
-import React, { useState } from 'react'
-import '../header/header.css';
-import Logo from '../../assets/images/StepUP.png'
-import SearchIcon from '@mui/icons-material/Search';
-import Select from '../selectDrop/Select'
+import { ClickAwayListener } from '@mui/base/ClickAwayListener';
+import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import PersonIcon from '@mui/icons-material/Person';
-import Button from '@mui/material/Button';
-import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
-import PinDropOutlinedIcon from '@mui/icons-material/PinDropOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import { ClickAwayListener } from '@mui/base/ClickAwayListener';
-
-
-
+import PersonIcon from '@mui/icons-material/Person';
+import PinDropOutlinedIcon from '@mui/icons-material/PinDropOutlined';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Button from '@mui/material/Button';
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+import Logo from '../../assets/images/StepUP.png';
+import '../header/header.css';
+import Select from '../selectDrop/Select';
 
 const Header = () => {
 
@@ -40,7 +38,8 @@ const Header = () => {
 
                         {/* logo */}
                         <div className='col-sm-2 logo'>
-                            <img src={Logo} alt='Logo' />
+                            <Link to={'/'}><img src={Logo} alt='Logo' /></Link> 
+                            {/* <img src={Logo} alt='Logo' /> */}
                         </div>
 
                         {/* search */}

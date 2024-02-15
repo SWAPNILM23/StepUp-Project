@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import '../selectDrop/select.css'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import React, { useState } from 'react';
+import '../selectDrop/select.css';
 
 const Select = ({data}) => {
 
