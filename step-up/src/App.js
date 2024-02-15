@@ -1,13 +1,13 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/header/Header';
 
+import Routing from'./routes/Routing';
 
 
 function App() {
   return (
    <div>
-    <Header />
+      <Routing/>
    </div>
   );
 }
