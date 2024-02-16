@@ -1,12 +1,17 @@
+// App.js
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import Routing from './routes/Routing';
 
 function App() {
   return (
-   <div>
-    <Routing/>
-   </div>
+    <div>
+      <BrowserRouter>
+        <Routing />
+      </BrowserRouter>
+    </div>
   );
 }
 

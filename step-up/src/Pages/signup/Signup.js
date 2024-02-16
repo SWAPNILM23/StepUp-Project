@@ -164,7 +164,7 @@ const Signup = () => {
                 </div>
 
                 <div className='user-button'>
-                    <Button component={Link} to={'/signin'} variant="contained" size="large" onClick={save}>Sign up</Button>
+                    <Button component={Link} to={'/user/signin'} variant="contained" size="large" onClick={save}>Sign up</Button>
                 </div>
 
             </form>

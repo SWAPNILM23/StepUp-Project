@@ -24,7 +24,7 @@ const Signin = () => {
                     alert("Email not exits");
                 }
                 else if (res.data.message === "Login Success") {
-
+                    localStorage.setItem(email,password);
                     navigate('/');
                 }
                 else {
@@ -84,7 +84,7 @@ const Signin = () => {
 
             </form>
 
-            <h6>New Member <Link to={'/signup'}>Sign Up</Link></h6>
+            <h6>New Member <Link to={'/user/signup'}>Sign Up</Link></h6>
 
         </div>
     )
