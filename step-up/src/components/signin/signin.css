@@ -1,20 +1,23 @@
-.login-box {
+.signin-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 70px;
+  margin: 40px 500px 40px 500px;
+  padding: 60px 0px;
+  border: 2px solid black;
+  border-radius: 15px;
 }
 
-.login-box h2 {
+.signin-box h2 {
   font-weight: 600;
 }
 
-.login-box h6{
+.signin-box h6 {
   padding-top: 15px;
 }
 
 .user-box {
-  padding-top: 10px;
+  padding-top: 20px;
   text-align: center;
   width: 300px;
 }
@@ -28,4 +31,3 @@
   width: 150px;
   height: 40px;
 }
-
