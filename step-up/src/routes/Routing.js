@@ -10,9 +10,11 @@ import Home from '../Pages/Home/index';
 import Signin from '../Pages/signin/Signin';
 import Signup from '../Pages/signup/Signup';
 import NotFound from '../components/NotFound/NotFound';
-import Footer from '../components/footer/Footer';
+import Footer from '../components/footer/footer';
 import AdminHeader from '../components/header/AdminHeader';
 import Header from '../components/header/Header';
+import Products1 from '../components/filtering/Products/Products';
+import ProductsPage from '../components/filtering/ProductsPage';
 
 const Routing = () => {
 
@@ -43,6 +45,7 @@ const Routing = () => {
                 <Route path='/admin/signin' element={<AdminSignin />} />
                 <Route path='/admin/home' element={<AdminHome/>}></Route>
                 <Route path='/admin/product' element={<Products/>}></Route>
+                <Route path='/admin/products' element={<ProductsPage/>}></Route>
                 <Route path='/admin/order' element={<Order/>}></Route>
                 <Route path='*' element={<NotFound />} />
             </Routes>
