@@ -19,7 +19,7 @@ const Home = () => {
                 <div className='item'>
                     <Product/>
                 </div>
-                <div className='item'>
+                {/* <div className='item'>
                     <Product/>
                 </div>
                 <div className='item'>
@@ -27,7 +27,7 @@ const Home = () => {
                 </div>
                 <div className='item'>
                     <Product/>
-                </div>
+                </div> */}
                 
               </div>
             </div>

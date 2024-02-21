@@ -1,4 +1,4 @@
-.productThumb{
+/* .productThumb{
     width:100%;
     height: auto;
     border: 1px solid rgba(0,0,0,0.2);
@@ -32,4 +32,59 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+} */
+
+
+/* --------------------------------------------------------------- */
+/* CardCarousel.css */
+.cardCarousel1 {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .card1 {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .card1 img {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card1 h3 {
+    margin-top: 0;
+  }
+
+  .price{
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    padding-right: 10px;
 }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .add-to-cart-btn,
+  .wishlist-btn {
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  /* You can add additional styling as needed */
+  
