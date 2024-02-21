@@ -31,4 +31,8 @@
 .user-button a {
     width: 150px;
     height: 40px;
-  }
+}
+
+.user-button h6{
+    padding-top: 10px;
+}

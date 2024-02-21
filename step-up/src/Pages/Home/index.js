@@ -1,9 +1,11 @@
-import React from 'react'
-import Slider from './slider/index';
+import React from 'react';
 
 const Home = () => {
     return (
-        <Slider/>
+        <div className='box1'>
+
+        </div>
+        // <Slider/>
     )
 }
 

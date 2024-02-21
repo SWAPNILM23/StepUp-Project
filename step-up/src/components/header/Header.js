@@ -9,7 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Button from '@mui/material/Button';
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../assets/images/StepUP.png';
 import '../header/header.css';
 import Select from '../selectDrop/Select';
@@ -30,7 +30,21 @@ const Header = () => {
         'Heels'
     ]);
 
+    const navigate = useNavigate();
+
+    async function signout(event) {
+        event.preventDefault();
+        try {
+            sessionStorage.clear();
+            navigate('/user/signin');
+        }
+        catch (err) {
+            alert(err);
+        }
+    }
+
     return (
+
         <div>
             <header>
                 <div className='container-fluid'>
@@ -38,7 +52,7 @@ const Header = () => {
 
                         {/* logo */}
                         <div className='col-sm-2 logo'>
-                            <Link to={'/'}><img src={Logo} alt='Logo' /></Link> 
+                            <Link to={'/'}><img src={Logo} alt='Logo' /></Link>
                             {/* <img src={Logo} alt='Logo' /> */}
                         </div>
 
@@ -58,12 +72,12 @@ const Header = () => {
 
                         <div className='col-sm-5 d-flex align-items-center'>
                             <div className='ml-auto d-flex align-items-center'>
-                                
-                                    <ul className='list list-inline mb-5 headertabs'>
-                                    <ClickAwayListener onClickAway={() => setisOpenDropDown1(false)}> 
+
+                                <ul className='list list-inline mb-5 headertabs'>
+                                    <ClickAwayListener onClickAway={() => setisOpenDropDown1(false)}>
                                         <li className='list-inline-item'>
-                        
-                                            <span onClick={() => setisOpenDropDown1(!isOpenDropDown1)}><AutoAwesomeOutlinedIcon/> Services</span>
+
+                                            <span onClick={() => setisOpenDropDown1(!isOpenDropDown1)}><AutoAwesomeOutlinedIcon /> Services</span>
                                             {
                                                 isOpenDropDown1 !== false &&
                                                 <ul className='dropdownmenu'>
@@ -73,16 +87,16 @@ const Header = () => {
 
                                             }
                                         </li>
-                                    </ClickAwayListener>    
+                                    </ClickAwayListener>
 
-                                        <li className='list-inline-item'>
-                                            <span><FavoriteBorderIcon /> Wishlist</span>
-                                        </li>
+                                    <li className='list-inline-item'>
+                                        <span><FavoriteBorderIcon /> Wishlist</span>
+                                    </li>
 
-                                        <li className='list-inline-item'>
-                                            <span><ShoppingCartOutlinedIcon /> Cart<span className='badge bg-primary rounded-circle'> </span></span>
-                                        </li>
-                                        <ClickAwayListener onClickAway={() => setisOpenDropDown(false)}>    
+                                    <li className='list-inline-item'>
+                                        <span><ShoppingCartOutlinedIcon /> Cart<span className='badge bg-primary rounded-circle'> </span></span>
+                                    </li>
+                                    <ClickAwayListener onClickAway={() => setisOpenDropDown(false)}>
                                         <li className='list-inline-item' >
 
                                             <span onClick={() => setisOpenDropDown(!isOpenDropDown)}><PersonIcon /> Account</span>
@@ -92,14 +106,14 @@ const Header = () => {
                                                     <li><Button className='align-items-center'> <AssignmentIndOutlinedIcon /> Profile</Button></li>
                                                     <li><Button><PinDropOutlinedIcon /> Tracking</Button></li>
                                                     <li><Button><FavoriteBorderIcon /> My Wishlist</Button></li>
-                                                    <li><Button><LogoutOutlinedIcon /> Sign out</Button></li>
+                                                    <li><Button onClick={signout}><LogoutOutlinedIcon /> Sign out</Button></li>
                                                 </ul>
 
                                             }
                                         </li>
-                                        </ClickAwayListener>       
-                                    </ul>
-                                
+                                    </ClickAwayListener>
+                                </ul>
+
                             </div>
                         </div>
 

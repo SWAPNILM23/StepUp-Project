@@ -7,28 +7,79 @@ import "./signin.css";
 
 const Signin = () => {
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const [item, setItem] = useState({
+        email: "",
+        password: "",
+    })
+    const [error, setError] = useState({
+        email: "",
+        password: "",
+    });
+    
+
+    const inputChangeHandler = (event) => {
+        const { type, name, value } = event.target;
+        setItem({ ...item, [name]: value })
+        setError({ ...error, [name]: "" })
+    }
+
+    const validateForm = () => {
+        let isValid = true;
+        const newError = { ...error };
+
+        if (item.email.trim() === "") {
+            newError.email = "Email is required";
+            isValid = false;
+        }
+
+        if (item.password.trim() === "") {
+            newError.password = "Password is required";
+            isValid = false;
+        }
+
+        setError(newError);
+        return isValid;
+    };
 
     async function login(event) {
         event.preventDefault();
+        if (!validateForm()) {
+            return; // If form is not valid, do not proceed with login
+        }
         try {
-            await axios.post("http://localhost:8081/api/user/login", {
-                email: email,
-                password: password,
-            }).then((res) => {
-                console.log(res.data);
-
+            await axios.post("http://localhost:8080/api/user/login", item).then((res) => {
+                // console.log(res.data);
+                const newError = { ...error };
                 if (res.data.message === "Email not exits") {
-                    alert("Email not exits");
+                    // alert("Email not exits");
+                    newError.email = "Incorrect Email";
+                    setError(newError);
+                }
+                else if(res.data.message==="password Not Match"){
+                    // alert("password is incorrect");
+                    newError.password = "Incorrect Password";
+                    setError(newError);
                 }
                 else if (res.data.message === "Login Success") {
-                    localStorage.setItem(email,password);
-                    navigate('/');
+                    if(sessionStorage.getItem("id")==="null" && sessionStorage.getItem("email")==="null"){
+                        sessionStorage.setItem("email",item.email);
+                        sessionStorage.setItem("id",res.data.id);
+                        navigate('/');
+                    }
+                    else{
+                        sessionStorage.clear();
+                        sessionStorage.setItem("email",item.email);
+                        sessionStorage.setItem("id",res.data.id);
+                        navigate('/');
+                    }
+                    
                 }
                 else {
-                    alert("Incorrect Email and Password not match");
+                    // alert("Incorrect Email and Password not match");
+                    newError.email = "Incorrect Email";
+                    newError.password = "Incorrect Password";
+                    setError(newError);
                 }
             }, fail => {
                 console.error(fail); // Error!
@@ -52,12 +103,10 @@ const Signin = () => {
                         variant="outlined"
                         type='email'
                         name='email'
-                        // helperText="Incorrect entry."
-
-                        value={email}
-                        onChange={(event) => {
-                            setEmail(event.target.value);
-                        }}
+                        helperText={error.email}
+                        error={Boolean(error.email)}
+                        value={item.email}
+                        onChange={inputChangeHandler} 
                     />
                 </div>
 
@@ -69,11 +118,11 @@ const Signin = () => {
                         type="password"
                         name='password'
                         autoComplete="current-password"
+                        helperText={error.password}
+                        error={Boolean(error.password)}
 
-                        value={password}
-                        onChange={(event) => {
-                            setPassword(event.target.value);
-                        }}
+                        value={item.password}
+                        onChange={inputChangeHandler} 
                     />
                 </div>
 
