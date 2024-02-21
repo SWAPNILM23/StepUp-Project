@@ -111,7 +111,7 @@ const Footer = () => {
                                 <div className='col'>
                                     <h3>Account</h3>
                                     <ul className="footer-list mb-sm-5 mb-md-0">
-                                        <li><Link to={'/signin'}>Signin</Link> </li>
+                                        <li><Link to={'/user/signin'}>Signin</Link> </li>
 
                                         <li><a href="#">View Cart</a></li>
                                         <li><a href="#">My Wishlist</a></li>
