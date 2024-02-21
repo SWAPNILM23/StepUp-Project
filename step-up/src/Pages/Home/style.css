@@ -1,3 +1,10 @@
-.box1{
-    height: 500px;
+.homeProducts .productRow{ 
+        display: flex;
+        padding: 30px 0px;
+    }
+
+.homeProducts .productRow .item{
+    width: 25%;
+    padding: 0px 15px;
 }
+
