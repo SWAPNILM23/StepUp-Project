@@ -1,0 +1,35 @@
+.productThumb{
+    width:100%;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.text-g{
+    text-decoration: none;
+}
+
+.button{
+    margin-left: 60px;
+}
+.button:hover{
+    background-color: rgb(85, 96, 245) !important ;
+    color: #fff !important;
+}
+.productThumb .title{
+    margin: 10px 0px;
+}
+.productThumb .title a{
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+}
+.price{
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+}

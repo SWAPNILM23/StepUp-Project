@@ -85,7 +85,7 @@ header .headerSearch .search .searchicon {
 /*tabs css*/
 header .headertabs {
     padding-left: 40px;
-    margin: 50px 0px 0px 100px;
+    margin: 50px 0px 0px 75px;
 }
 
 header .headertabs li {
@@ -118,6 +118,7 @@ header .headertabs li span .badge {
     height: auto;
     background: #fff;
     box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
+    z-index: 1000;
 }
 
 .dropdownmenu li {
