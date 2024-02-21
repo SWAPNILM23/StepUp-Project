@@ -1,11 +1,14 @@
-import React from 'react'
-import './style.css'
-import Img from '../../assets/images/4.jpg'
-import Rating from '@mui/material/Rating';
-import { Button } from '@mui/material';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Button } from '@mui/material';
+import Rating from '@mui/material/Rating';
+import React from 'react';
+import Img from '../../assets/images/4.jpg';
+import './style.css';
 
 const Product = () => {
+
+
+
     return (
         <div className='productThumb'>
             <div className='imgWrapper'>
