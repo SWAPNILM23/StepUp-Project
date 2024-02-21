@@ -1,6 +1,6 @@
 import "./Product.css";
 
-const Products = ({ result }) => {
+const Products1 = ({ result }) => {
   return (
     <>
       <section className="card-container">{result}</section>
@@ -8,4 +8,4 @@ const Products = ({ result }) => {
   );
 };
 
-export default Products;
+export default Products1;

@@ -62,9 +62,9 @@ const Header = () => {
                                 <Select data={categories} />
 
 
-                                <div className='search'>
+                                <div className='search' onClick={e=>navigate('/admin/products')}>
                                     <input type='text' placeholder='Search' />
-                                    <SearchIcon className='searchicon cursor' />
+                                    <SearchIcon  className='searchicon cursor' />
                                 </div>
 
                             </div>
